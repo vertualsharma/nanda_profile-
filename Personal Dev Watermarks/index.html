@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Report Card – Aims Educational Academy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 10px;
+      background-color: #EEF9FF;
+      color: #2C3E50;
+    }
+
+    .card {
+      max-width: 950px;
+      margin: auto;
+      background-color: #ffffff;
+      border: 4px solid #3498DB;
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 1;
+    }
+
+    .watermark-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.06;
+      width: 500px;
+      max-width: 80%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #3498DB;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .logo img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border: 2px dashed #95A5A6;
+      background-color: #ECF0F1;
+    }
+
+    .school-info {
+      flex-grow: 1;
+      padding-left: 20px;
+    }
+
+    .school-info h1 {
+      margin: 0;
+      font-size: 22px;
+      color: #1E6FA3;
+    }
+
+    .school-info p {
+      margin: 3px 0;
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 16px;
+      color: #217DBB;
+      margin-bottom: 6px;
+      border-bottom: 1px solid #95A5A6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+    }
+
+    th, td {
+      border: 1px solid #95A5A6;
+      padding: 6px;
+      font-size: 13px;
+    }
+
+    th {
+      background-color: #D6EAF8;
+    }
+
+    input[type="text"], input[type="number"] {
+      width: 80px;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+
+    textarea {
+      width: 100%;
+      height: 60px;
+      font-size: 13px;
+      padding: 6px;
+      border: 1px solid #95A5A6;
+      margin-top: 8px;
+      background-color: #F4F9FB;
+    }
+
+    .print-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 8px 20px;
+      background-color: #27AE60;
+      color: #FFFFFF;
+      border: none;
+      font-size: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .print-btn:hover {
+      background-color: #1E8449;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+      body {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <img src="watermark-logo.png" alt="Watermark" class="watermark-image">
+
+  <div class="header">
+    <div class="logo">
+      <img src="school-logo.png" alt="School Logo">
+    </div>
+    <div class="school-info">
+      <h1>Aims Educational Academy</h1>
+      <p>Arjundhara - 8, Jhapa</p>
+      <p><strong>FIRST STUDENT PERSONAL DEVELOPMENT REPORT CARD-2082</strong></p>
+    </div>
+  </div>
+
+  <h2>EXTRA CO-CURRICULAR ACTIVITIES</h2>
+  <table>
+    <tr><th>SN</th><th>Activity</th><th>Interest Level (1–5)</th><th>Selected</th></tr>
+    <tr><td>01</td><td>Football</td><td><input type="number" min="1" max="5"></td><td><input type="checkbox"></td></tr>
+    <tr><td>02</td><td>Cricket</td><td><input type="number" min="1" max="5"></td><td><input type="checkbox"></td></tr>
+    <tr><td>03</td><td>Dance</td><td><input type="number" min="1" max="5"></td><td><input type="checkbox"></td></tr>
+    <tr><td>04</td><td>Music</td><td><input type="number" min="1" max="5"></td><td><input type="checkbox"></td></tr>
+    <tr><td>05</td><td>Volleyball</td><td><input type="number" min="1" max="5"></td><td><input type="checkbox"></td></tr>
+  </table>
+
+  <h2>HEALTH & HYGIENE ASSESSMENT</h2>
+  <table>
+    <tr><th>SN</th><th>Criteria</th><th>Measurement</th><th>Remarks</th></tr>
+    <tr><td>01</td><td>Height</td><td><input type="text" placeholder="cm"></td><td><input type="text"></td></tr>
+    <tr><td>02</td><td>Weight</td><td><input type="text" placeholder="kg"></td><td><input type="text"></td></tr>
+    <tr><td>03</td><td>Blood Group</td><td><input type="text"></td><td><input type="text"></td></tr>
+    <tr><td>04</td><td>Eye Sight</td><td><input type="text"></td><td><input type="text"></td></tr>
+    <tr><td>05</td><td>Neat & Orderly</td><td><input type="text"></td><td><input type="text"></td></tr>
+  </table>
+
+  <h2>CO-CURRICULAR ASSESSMENT</h2>
+  <table>
+    <tr><th>SN</th><th>Particular</th><th>Rating (1–5)</th><th>Description</th></tr>
+    <tr><td>01</td><td>Language</td><td><input type="number" min="1" max="5"></td><td>Communication, Expression</td></tr>
+    <tr><td>02</td><td>Reading</td><td><input type="number" min="1" max="5"></td><td>Grammar, vocabulary</td></tr>
+    <tr><td>03</td><td>Discipline</td><td><input type="number" min="1" max="5"></td><td>Punctuality, respect</td></tr>
+    <tr><td>04</td><td>Handwriting</td><td><input type="number" min="1" max="5"></td><td>Neatness, legibility</td></tr>
+    <tr><td>05</td><td>Field Visit</td><td><input type="number" min="1" max="5"></td><td>Participation, attentiveness</td></tr>
+    <tr><td>06</td><td>Drawing</td><td><input type="number" min="1" max="5"></td><td>Creativity, presentation</td></tr>
+    <tr><td>07</td><td>Speech</td><td><input type="number" min="1" max="5"></td><td>Confidence, articulation</td></tr>
+    <tr><td>08</td><td>Rhymes</td><td><input type="number" min="1" max="5"></td><td>Memory, Accuracy</td></tr>
+  </table>
+
+  <h2>Teacher’s Remarks</h2>
+  <textarea placeholder="Write your remarks here..."></textarea>
+
+  <button class="print-btn" onclick="window.print()">🖨️ Print Report</button>
+</div>
+
+</body>
+</html>
